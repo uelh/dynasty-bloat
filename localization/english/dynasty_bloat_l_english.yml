@@ -1,0 +1,40 @@
+﻿l_english:
+
+ game_rule_category_dynasty_bloat:0 "Dynasty Bloat"
+
+ rule_dynasty_bloat_child_limit:0 "Dynasty Bloat: Child Limit"
+
+ setting_off_dynasty_bloat_child_limit:0 "#high Off#!"
+ setting_off_dynasty_bloat_child_limit_desc:0 "No limit is applied. Your [fertility|E] is unchanged."
+
+ setting_cap_1_dynasty_bloat_child_limit:0 "#high 1#!"
+ setting_cap_1_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 1#! [child|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected. @alert_icon! #alert_trial A single [heir|E] leaves no spare#!"
+
+ setting_cap_2_dynasty_bloat_child_limit:0 "#high 2#!"
+ setting_cap_2_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 2#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+
+ setting_cap_3_dynasty_bloat_child_limit:0 "3"
+ setting_cap_3_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 3#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+
+ setting_cap_4_dynasty_bloat_child_limit:0 "#high 4#!"
+ setting_cap_4_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 4#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+
+ setting_cap_5_dynasty_bloat_child_limit:0 "#high 5#!"
+ setting_cap_5_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 5#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+
+ rule_dynasty_bloat_child_count:0 "Dynasty Bloat: Child Count"
+
+ setting_living_dynasty_bloat_child_count:0 "Living children"
+ setting_living_dynasty_bloat_child_count_desc:0 "A [child|E] who dies does not count towards the limit."
+
+ setting_everborn_dynasty_bloat_child_count:0 "#high Children ever born#!"
+ setting_everborn_dynasty_bloat_child_count_desc:0 "A [child|E] who dies still counts towards the limit."
+
+ dynasty_bloat_limit_reached_one:0 "An Heir"
+ dynasty_bloat_limit_reached_one_desc:0 "There is an [heir|E]. This character has no need of more [children|E]."
+
+ dynasty_bloat_limit_reached_two:0 "An Heir and a Spare"
+ dynasty_bloat_limit_reached_two_desc:0 "The [succession|E] is secure. This character has no need of more [children|E]."
+
+ dynasty_bloat_limit_reached_many:0 "Heirs and Spares"
+ dynasty_bloat_limit_reached_many_desc:0 "The [succession|E] is secure. This character has no need of more [children|E]."

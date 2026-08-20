@@ -1,0 +1,23 @@
+﻿dynasty_bloat_child_limit = {
+	value = 3
+
+	if = {
+		limit = { has_game_rule = cap_1_dynasty_bloat_child_limit }
+		add = -2
+	}
+
+	if = {
+		limit = { has_game_rule = cap_2_dynasty_bloat_child_limit }
+		add = -1
+	}
+
+	if = {
+		limit = { has_game_rule = cap_4_dynasty_bloat_child_limit }
+		add = 1
+	}
+
+	if = {
+		limit = { has_game_rule = cap_5_dynasty_bloat_child_limit }
+		add = 2
+	}
+}

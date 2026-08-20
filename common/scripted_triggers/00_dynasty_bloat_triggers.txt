@@ -1,0 +1,15 @@
+﻿dynasty_bloat_has_children_trigger = {
+	trigger_if = {
+		limit = { has_game_rule = everborn_dynasty_bloat_child_count }
+
+		any_child = {
+			even_if_dead = yes
+			count >= $COUNT$
+		}
+	}
+	trigger_else = {
+		any_child = {
+			count >= $COUNT$
+		}
+	}
+}

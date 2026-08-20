@@ -1,0 +1,122 @@
+﻿on_game_start_after_lobby = {
+	on_actions = { dynasty_bloat_track_players }
+}
+
+yearly_global_pulse = {
+	on_actions = { dynasty_bloat_track_players }
+}
+
+on_birth_child = {
+	on_actions = { dynasty_bloat_on_birth }
+}
+
+on_death = {
+	on_actions = { dynasty_bloat_on_death }
+}
+
+quarterly_playable_pulse = {
+	on_actions = { dynasty_bloat_refresh }
+}
+
+random_yearly_everyone_pulse = {
+	on_actions = { dynasty_bloat_refresh }
+}
+
+dynasty_bloat_track_players = {
+	effect = {
+		if = {
+			limit = { NOT = { has_game_rule = off_dynasty_bloat_child_limit } }
+
+			every_player = {
+				dynasty_bloat_mark_line_effect = yes
+			}
+		}
+	}
+}
+
+dynasty_bloat_on_birth = {
+	trigger = {
+		NOT = { has_game_rule = off_dynasty_bloat_child_limit }
+	}
+	effect = {
+		every_parent = {
+			limit = {
+				is_ai = no
+				NOT = { has_character_flag = dynasty_bloat_tracked }
+			}
+			dynasty_bloat_mark_line_effect = yes
+		}
+
+		every_parent = {
+			limit = { has_character_flag = dynasty_bloat_tracked }
+			dynasty_bloat_apply_effect = yes
+		}
+
+		if = {
+			limit = {
+				exists = dynasty
+				OR = {
+					AND = {
+						scope:mother ?= { has_character_flag = dynasty_bloat_tracked }
+						scope:mother.dynasty ?= dynasty
+					}
+					AND = {
+						scope:father ?= { has_character_flag = dynasty_bloat_tracked }
+						scope:father.dynasty ?= dynasty
+					}
+					AND = {
+						scope:real_father ?= { has_character_flag = dynasty_bloat_tracked }
+						scope:real_father.dynasty ?= dynasty
+					}
+				}
+			}
+			dynasty_bloat_mark_effect = yes
+		}
+	}
+}
+
+dynasty_bloat_on_death = {
+	trigger = {
+		NOT = { has_game_rule = off_dynasty_bloat_child_limit }
+		NOT = { has_game_rule = everborn_dynasty_bloat_child_count }
+		any_parent = { has_character_flag = dynasty_bloat_tracked }
+	}
+	effect = {
+		every_parent = {
+			limit = { has_character_flag = dynasty_bloat_tracked }
+			trigger_event = {
+				on_action = dynasty_bloat_parent_recheck
+				days = 1
+			}
+		}
+	}
+}
+
+dynasty_bloat_parent_recheck = {
+	effect = {
+		dynasty_bloat_apply_effect = yes
+	}
+}
+
+dynasty_bloat_refresh = {
+	trigger = {
+		has_character_flag = dynasty_bloat_tracked
+	}
+	effect = {
+		dynasty_bloat_apply_effect = yes
+
+		if = {
+			limit = {
+				NOT = { has_game_rule = off_dynasty_bloat_child_limit }
+				exists = dynasty
+			}
+
+			save_temporary_scope_as = dynasty_bloat_ancestor
+
+			every_child = {
+				limit = { dynasty ?= scope:dynasty_bloat_ancestor.dynasty }
+				dynasty_bloat_mark_effect = yes
+			}
+		}
+	}
+}

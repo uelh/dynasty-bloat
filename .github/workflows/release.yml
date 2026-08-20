@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the package
+        run: |
+          mkdir -p out/dynasty-bloat
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.gitattributes' \
+            --exclude 'README.md' \
+            --exclude 'steam_description.txt' \
+            --exclude 'dynasty-bloat.mod' \
+            --exclude 'out' \
+            ./ out/dynasty-bloat/
+          cp dynasty-bloat.mod out/
+          cd out && zip -r ../dynasty-bloat.zip dynasty-bloat.mod dynasty-bloat
+
+      - name: Create the draft release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dynasty-bloat.zip --generate-notes --draft

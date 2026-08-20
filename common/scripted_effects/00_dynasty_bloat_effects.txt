@@ -1,0 +1,64 @@
+﻿dynasty_bloat_apply_effect = {
+	if = {
+		limit = { has_character_modifier = dynasty_bloat_limit_reached_one }
+		remove_character_modifier = dynasty_bloat_limit_reached_one
+	}
+
+	if = {
+		limit = { has_character_modifier = dynasty_bloat_limit_reached_two }
+		remove_character_modifier = dynasty_bloat_limit_reached_two
+	}
+
+	if = {
+		limit = { has_character_modifier = dynasty_bloat_limit_reached_many }
+		remove_character_modifier = dynasty_bloat_limit_reached_many
+	}
+
+	if = {
+		limit = {
+			NOT = { has_game_rule = off_dynasty_bloat_child_limit }
+			dynasty_bloat_has_children_trigger = {
+				COUNT = dynasty_bloat_child_limit
+			}
+		}
+
+		if = {
+			limit = {
+				dynasty_bloat_has_children_trigger = { COUNT = 3 }
+			}
+			add_character_modifier = dynasty_bloat_limit_reached_many
+		}
+		else_if = {
+			limit = {
+				dynasty_bloat_has_children_trigger = { COUNT = 2 }
+			}
+			add_character_modifier = dynasty_bloat_limit_reached_two
+		}
+		else = {
+			add_character_modifier = dynasty_bloat_limit_reached_one
+		}
+	}
+}
+
+dynasty_bloat_mark_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = dynasty_bloat_tracked } }
+		add_character_flag = dynasty_bloat_tracked
+		dynasty_bloat_apply_effect = yes
+	}
+}
+
+dynasty_bloat_mark_line_effect = {
+	dynasty_bloat_mark_effect = yes
+
+	if = {
+		limit = { exists = dynasty }
+
+		dynasty = {
+			every_dynasty_member = {
+				limit = { is_alive = yes }
+				dynasty_bloat_mark_effect = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+﻿dynasty_bloat_child_limit = {
+
+	categories = {
+		dynasty_bloat tweaks
+	}
+
+	default = cap_3_dynasty_bloat_child_limit
+
+	off_dynasty_bloat_child_limit = {
+
+	}
+
+	cap_1_dynasty_bloat_child_limit = {
+
+	}
+
+	cap_2_dynasty_bloat_child_limit = {
+
+	}
+
+	cap_3_dynasty_bloat_child_limit = {
+
+	}
+
+	cap_4_dynasty_bloat_child_limit = {
+
+	}
+
+	cap_5_dynasty_bloat_child_limit = {
+
+	}
+}
+
+dynasty_bloat_child_count = {
+
+	categories = {
+		dynasty_bloat tweaks
+	}
+
+	default = living_dynasty_bloat_child_count
+
+	living_dynasty_bloat_child_count = {
+
+	}
+
+	everborn_dynasty_bloat_child_count = {
+
+	}
+}

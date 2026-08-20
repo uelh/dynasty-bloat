@@ -1,0 +1,44 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  localization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check every localization file
+        run: |
+          shopt -s nullglob
+          files=(localization/*/*.yml)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "::error::No localization files found."
+            exit 1
+          fi
+
+          fail=0
+          for f in "${files[@]}"; do
+            language="$(basename "$(dirname "$f")")"
+
+            if [ "$(head -c 3 "$f" | od -An -tx1 | tr -d ' ')" != "efbbbf" ]; then
+              echo "::error file=$f::No UTF-8 BOM. The game ignores this file. Save it as UTF-8 with a BOM."
+              fail=1
+            fi
+
+            if ! head -c 200 "$f" | grep -q "l_${language}:"; then
+              echo "::error file=$f::The first line must be l_${language}: to match the folder."
+              fail=1
+            fi
+          done
+
+          if [ "$fail" -eq 1 ]; then
+            exit 1
+          fi
+
+          echo "${#files[@]} localization file(s) checked. All good."
