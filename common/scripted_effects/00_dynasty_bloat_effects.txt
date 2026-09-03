@@ -1,20 +1,5 @@
 ﻿dynasty_bloat_apply_effect = {
 	if = {
-		limit = { has_character_modifier = dynasty_bloat_limit_reached_one }
-		remove_character_modifier = dynasty_bloat_limit_reached_one
-	}
-
-	if = {
-		limit = { has_character_modifier = dynasty_bloat_limit_reached_two }
-		remove_character_modifier = dynasty_bloat_limit_reached_two
-	}
-
-	if = {
-		limit = { has_character_modifier = dynasty_bloat_limit_reached_many }
-		remove_character_modifier = dynasty_bloat_limit_reached_many
-	}
-
-	if = {
 		limit = {
 			NOT = { has_game_rule = off_dynasty_bloat_child_limit }
 			dynasty_bloat_has_children_trigger = {
@@ -23,19 +8,20 @@
 		}
 
 		if = {
-			limit = {
-				dynasty_bloat_has_children_trigger = { COUNT = 3 }
+			limit = { NOT = { has_trait = dynasty_bloat_settled } }
+
+			hidden_effect = {
+				add_trait = dynasty_bloat_settled
 			}
-			add_character_modifier = dynasty_bloat_limit_reached_many
 		}
-		else_if = {
-			limit = {
-				dynasty_bloat_has_children_trigger = { COUNT = 2 }
+	}
+	else = {
+		if = {
+			limit = { has_trait = dynasty_bloat_settled }
+
+			hidden_effect = {
+				remove_trait = dynasty_bloat_settled
 			}
-			add_character_modifier = dynasty_bloat_limit_reached_two
-		}
-		else = {
-			add_character_modifier = dynasty_bloat_limit_reached_one
 		}
 	}
 }
