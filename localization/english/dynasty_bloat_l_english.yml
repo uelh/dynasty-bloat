@@ -30,14 +30,5 @@
  setting_everborn_dynasty_bloat_child_count:0 "#high Children ever born#!"
  setting_everborn_dynasty_bloat_child_count_desc:0 "A [child|E] who dies still counts towards the limit."
 
- dynasty_bloat_limit_reached_one:0 "An Heir"
- dynasty_bloat_limit_reached_one_desc:0 "There is an [heir|E]. This character has no need of more [children|E]."
-
- dynasty_bloat_limit_reached_two:0 "An Heir and a Spare"
- dynasty_bloat_limit_reached_two_desc:0 "The [succession|E] is secure. This character has no need of more [children|E]."
-
- dynasty_bloat_limit_reached_many:0 "Heirs and Spares"
- dynasty_bloat_limit_reached_many_desc:0 "The [succession|E] is secure. This character has no need of more [children|E]."
-
  trait_dynasty_bloat_settled:0 "Settled"
  trait_dynasty_bloat_settled_desc:0 "This character has all the children they want, and will have no more."
