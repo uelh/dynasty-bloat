@@ -38,3 +38,6 @@
 
  dynasty_bloat_limit_reached_many:0 "Heirs and Spares"
  dynasty_bloat_limit_reached_many_desc:0 "The [succession|E] is secure. This character has no need of more [children|E]."
+
+ trait_dynasty_bloat_settled:0 "Settled"
+ trait_dynasty_bloat_settled_desc:0 "This character has all the children they want, and will have no more."

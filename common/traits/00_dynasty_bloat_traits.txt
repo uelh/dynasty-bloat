@@ -1,0 +1,6 @@
+﻿dynasty_bloat_settled = {
+	can_have_children = no
+
+	shown_in_ruler_designer = no
+	shown_in_encyclopedia = no
+}
