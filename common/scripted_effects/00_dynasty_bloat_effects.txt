@@ -30,8 +30,9 @@ dynasty_bloat_mark_effect = {
 	if = {
 		limit = { NOT = { has_character_flag = dynasty_bloat_tracked } }
 		add_character_flag = dynasty_bloat_tracked
-		dynasty_bloat_apply_effect = yes
 	}
+
+	dynasty_bloat_apply_effect = yes
 }
 
 dynasty_bloat_mark_line_effect = {
