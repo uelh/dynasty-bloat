@@ -13,7 +13,7 @@
 
 <p align="center">
   A mod for <a href="https://www.paradoxinteractive.com/games/crusader-kings-iii/about">Crusader Kings III</a> that limits how many children each member of your dynasty can have.<br>
-  When a character reaches the limit, they get a modifier worth -100% fertility. Only your dynasty is affected.
+  When a character reaches the limit, they gain the Settled trait and stop having children.
 </p>
 
 ## Download

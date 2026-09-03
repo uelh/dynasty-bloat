@@ -1,17 +1,13 @@
 [h1] Dynasty Bloat [/h1]
 This mod limits how many children each member of your dynasty can have.
 
-Large dynasties become a chore. Each child needs an education, then a marriage. Then their children need the same, and the work grows with every generation. This mod sets a limit. When a character reaches the limit, the mod gives them a modifier worth -100% fertility and they stop having children. 
-
-Only your dynasty is affected. Unrelated characters keep their normal fertility, and the AI world is untouched.
+Large dynasties become a chore. Each child needs an education, then a marriage. Then their children need the same, and the work grows with every generation. This mod sets a limit. When a character reaches the limit, the mod gives them a trait and they stop having children. 
 
 [h1] What the mod does [/h1]
 [list]
 [*]Counts the children of every member of your dynasty.
-[*]Gives a character a -100% fertility modifier once they reach the limit, so they stop having children.
-[*]Names that modifier after the family size: An Heir for one child, An Heir and a Spare for two, Heirs and Spares for three or more.
-[*]Recounts after every birth and every death, so the modifier comes and goes as your family changes.
-[*]Leaves the rest of the world alone. Characters outside your dynasty keep their normal fertility.
+[*]Gives a character the Settled trait once they reach the limit, so they stop having children.
+[*]Recounts after every birth and every death, so the trait comes and goes as your family changes.
 [/list]
 
 [h1] Game rules [/h1]
@@ -26,7 +22,8 @@ Both rules sit in the Dynasty Bloat and Tweaks categories. You can change either
 [h1] Limitations [/h1]
 [list]
 [*] Pregnancies already underway and twins can bypass the limit.
+[*] The game checks whether a character can have children when it arranges marriages. A character at the limit is less likely to be matched.
 [/list]
 
 [h1] Compatibility [/h1]
-The mod adds new files only. It replaces no vanilla file. It is not tested against other fertility or pregnancy mods.
+The mod adds new files only. It replaces no vanilla file. It is not tested against other mods that change children or pregnancy.
