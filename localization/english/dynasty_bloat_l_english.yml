@@ -5,22 +5,22 @@
  rule_dynasty_bloat_child_limit:0 "Dynasty Bloat: Child Limit"
 
  setting_off_dynasty_bloat_child_limit:0 "#high Off#!"
- setting_off_dynasty_bloat_child_limit_desc:0 "No limit is applied. Your [fertility|E] is unchanged."
+ setting_off_dynasty_bloat_child_limit_desc:0 "No limit is applied."
 
  setting_cap_1_dynasty_bloat_child_limit:0 "#high 1#!"
- setting_cap_1_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 1#! [child|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected. @alert_icon! #alert_trial A single [heir|E] leaves no spare#!"
+ setting_cap_1_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 1#! [child|E]. @alert_icon! #alert_trial This increases the risk of an early [game_over|E].#!"
 
  setting_cap_2_dynasty_bloat_child_limit:0 "#high 2#!"
- setting_cap_2_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 2#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+ setting_cap_2_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 2#! [children|E]."
 
  setting_cap_3_dynasty_bloat_child_limit:0 "3"
- setting_cap_3_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 3#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+ setting_cap_3_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 3#! [children|E]."
 
  setting_cap_4_dynasty_bloat_child_limit:0 "#high 4#!"
- setting_cap_4_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 4#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+ setting_cap_4_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 4#! [children|E]."
 
  setting_cap_5_dynasty_bloat_child_limit:0 "#high 5#!"
- setting_cap_5_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 5#! [children|E]. Your [fertility|E] is unchanged until then, and unrelated characters are unaffected."
+ setting_cap_5_dynasty_bloat_child_limit_desc:0 "You and your [dynasty|E] may each have at most #V 5#! [children|E]."
 
  rule_dynasty_bloat_child_count:0 "Dynasty Bloat: Child Count"
 
